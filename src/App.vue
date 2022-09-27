@@ -1,13 +1,16 @@
 <template>
-  <h1>Hello World</h1>
+  <HomeSection />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import HomeSection from "./sections/Home.vue";
 
 export default defineComponent({
   name: "App",
-  components: {},
+  components: {
+    HomeSection,
+  },
 });
 </script>
 
