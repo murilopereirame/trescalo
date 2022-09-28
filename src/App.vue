@@ -23,6 +23,14 @@ export default defineComponent({
   height: 100%;
 }
 
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1080px;
+  width: 100%;
+  height: 100%;
+}
+
 body,
 html {
   margin: 0;
