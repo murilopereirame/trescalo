@@ -26,7 +26,7 @@ header {
   background-size: cover;
   height: 100%;
   width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .Wrapper {
@@ -69,6 +69,7 @@ header {
   align-items: center;
   width: 100%;
   height: 100%;
+  padding-top: 100px;
 }
 
 .Header-Image img {
@@ -127,6 +128,7 @@ header {
 @media only screen and (min-width: 1024px) {
   header {
     padding-top: 100px;
+    padding-bottom: 170px;
   }
 
   .Header-Text {
@@ -143,7 +145,7 @@ header {
   }
 
   .Header-Image {
-    padding-top: 100px;
+    padding-top: clamp(100px, 50vh, 300px);
   }
 
   .Header-Image img {
@@ -176,6 +178,7 @@ header {
 
   .Header-Image {
     padding-top: 0;
+    justify-content: center;
   }
 
   .Header-Image img {
