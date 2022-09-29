@@ -1,15 +1,18 @@
 <template>
   <HomeSection />
+  <SquadSection />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import HomeSection from "./sections/Home.vue";
+import SquadSection from "./sections/Squad.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     HomeSection,
+    SquadSection,
   },
 });
 </script>
@@ -26,7 +29,7 @@ export default defineComponent({
 .Wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 1080px;
+  max-width: 1920px;
   width: 100%;
   height: 100%;
 }
@@ -37,5 +40,6 @@ html {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  background-color: #002641;
 }
 </style>

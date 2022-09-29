@@ -1,11 +1,13 @@
 <template>
   <header>
-    <div class="Header-Text">
-      <p>cuidar<br />de você<br />é sempre</p>
-      <p>proteger</p>
-    </div>
-    <div class="Header-Image">
-      <img src="@/assets/images/logo.svg" alt="Grupo Trescalo" />
+    <div class="Wrapper">
+      <div class="Header-Text">
+        <p>cuidar<br />de você<br />é sempre</p>
+        <p>proteger</p>
+      </div>
+      <div class="Header-Image">
+        <img src="@/assets/images/logo.svg" alt="Grupo Trescalo" />
+      </div>
     </div>
   </header>
 </template>
@@ -18,224 +20,184 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.Header-Text {
-  text-align: left;
-  max-width: 1080px;
+header {
+  background: url("@/assets/images/bg_home.jpg");
+  background-position-x: 30%;
+  background-size: cover;
+  height: 100%;
   width: 100%;
+  padding-bottom: 100px;
 }
+
+.Wrapper {
+  justify-content: center;
+}
+
 .Header-Text p {
   margin: 0;
 }
+
+.Header-Text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  padding-left: 0.5em;
+  flex: 1;
+}
+
 .Header-Text p:first-child {
   font-family: "Modern No. 20";
-  font-size: 4.5rem;
-  line-height: 3.75rem;
+  font-size: clamp(4rem, 25vw + 0.5em, 5rem);
   color: $primary;
-  margin-top: 10rem;
-  margin-left: 2.75%;
+  line-height: 0.75em;
 }
 
 .Header-Text p:last-child {
   font-family: "Liana";
-  font-size: 9.5rem;
-  line-height: 1rem;
-  margin-top: -2rem;
+  font-size: clamp(4rem, 40vw + 0.5em, 25rem);
+  position: absolute;
+  bottom: clamp(-1em, -1vh, -0.5em);
   color: $secondary;
-  margin-left: 3.5%;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: url("@/assets/images/bg_home.jpg") 30% 0px;
-  background-size: cover;
-  height: 100%;
-  padding: 2rem 0;
 }
 
 .Header-Image {
+  flex: 1;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  margin-top: 12.5rem;
-  max-width: 1080px;
+  width: 100%;
+  height: 100%;
 }
 
-header img {
-  width: 75%;
+.Header-Image img {
+  width: clamp(200px, 50vw, 380px);
 }
 
-@media screen and (max-width: 390px) {
+@media only screen and (min-width: 540px) {
   header {
-    padding: 0;
+    padding-top: 150px;
   }
-
   .Header-Text p:first-child {
-    font-size: 5rem;
-    line-height: 3.75rem;
-    margin-left: 2.75%;
-    margin-top: 8.25rem;
+    font-size: clamp(7rem, 25vw + 0.5em, 7rem);
   }
 
   .Header-Text p:last-child {
-    font-size: 8.5rem;
-    line-height: 1.5rem;
-    margin-top: -2.5rem;
-    margin-left: 3.5%;
+    font-size: clamp(4rem, 40vw + 0.5em, 25rem);
+    bottom: clamp(-1em, -1vh, -0.55em);
   }
 
   .Header-Image {
-    margin-top: 10rem;
+    padding-top: 150px;
   }
 
-  header img {
-    width: 12.5rem;
+  .Header-Image img {
+    width: clamp(200px, 50vw, 225px);
   }
 }
 
 @media only screen and (min-width: 768px) {
+  header {
+    padding-top: 100px;
+  }
+
+  .Header-Text {
+    padding-left: 1.5em;
+  }
+
   .Header-Text p:first-child {
-    font-size: 10rem;
-    line-height: 7.5rem;
-    margin-left: 2.75%;
-    margin-top: 5rem;
+    font-size: clamp(7rem, 25vw + 0.5em, 10rem);
   }
 
   .Header-Text p:last-child {
-    font-size: 17.55rem;
-    line-height: 1.5rem;
-    margin-top: -3.5rem;
-    margin-left: 3.5%;
+    font-size: clamp(4rem, 40vw + 0.5em, 25rem);
+    bottom: clamp(-1em, -1vh, -0.55em);
   }
 
   .Header-Image {
-    margin-top: 17.5rem;
+    padding-top: 100px;
   }
 
-  header img {
-    width: 25rem;
+  .Header-Image img {
+    width: clamp(200px, 50vw, 350px);
   }
 }
 
 @media only screen and (min-width: 1024px) {
   header {
-    flex-direction: row;
-    padding: 0;
-    align-items: center;
+    padding-top: 100px;
   }
 
   .Header-Text {
-    margin-bottom: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    flex: 1;
-    height: 100%;
+    padding-left: 1.5em;
   }
 
   .Header-Text p:first-child {
-    font-size: 7.5rem;
-    line-height: 5.5rem;
-    margin-left: 1.5rem;
-    margin-top: 0rem;
-    width: 100%;
+    font-size: clamp(7rem, 25vw + 0.5em, 10rem);
   }
 
   .Header-Text p:last-child {
-    font-size: 12.5rem;
-    line-height: 1.5rem;
-    margin-top: -3.5rem;
-    margin-left: 3.5%;
+    font-size: clamp(4rem, 40vw + 0.5em, 20rem);
+    bottom: clamp(-1em, -1vh, -0.5em);
   }
 
   .Header-Image {
-    margin-top: 0rem;
-    margin-left: 0rem;
-    width: 100%;
-    flex: 1;
+    padding-top: 100px;
   }
 
-  header img {
-    width: 15.5rem;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .Header-Text {
-    margin-bottom: 7.75rem;
-  }
-  .Header-Text p:first-child {
-    font-size: 10rem;
-    line-height: 7.25rem;
-  }
-
-  .Header-Text p:last-child {
-    font-size: 16.5rem;
-    line-height: 1.5rem;
-    margin-top: -3.5rem;
-    margin-left: 3.5%;
-  }
-
-  .Header-Image {
-    margin-top: 0rem;
-    margin-left: 0rem;
-    width: 100%;
-    flex: 1;
-  }
-
-  header img {
-    width: 20rem;
+  .Header-Image img {
+    width: clamp(200px, 50vw, 350px);
   }
 }
 
 @media only screen and (min-width: 1360px) {
-  .Header-Text {
-    margin-bottom: 3.5rem;
+  header {
+    padding-top: 0;
+    padding-bottom: 150px;
   }
+  .Wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .Header-Text {
+    padding-left: 1.5em;
+  }
+
   .Header-Text p:first-child {
-    font-size: 7.5rem;
-    line-height: 5rem;
+    font-size: clamp(7rem, 25vw + 0.5em, 8rem);
   }
 
   .Header-Text p:last-child {
-    font-size: 14rem;
-    line-height: 1.5rem;
-    margin-top: -2.75rem;
+    font-size: clamp(4rem, 40vw + 0.5em, 17.5rem);
+    bottom: clamp(-1em, -1vh, -0.5em);
   }
 
   .Header-Image {
-    margin-top: 0rem;
-    margin-left: 0rem;
-    width: 100%;
-    flex: 1;
-    height: 100%;
+    padding-top: 0;
   }
 
-  header img {
-    width: 20rem;
+  .Header-Image img {
+    width: clamp(200px, 50vw, 300px);
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  .Header-Text {
-    margin-bottom: 12.5rem;
+  header {
+    padding-bottom: 150px;
   }
+
   .Header-Text p:first-child {
-    font-size: 15.5rem;
-    line-height: 11.25rem;
+    font-size: clamp(7rem, 25vw + 0.5em, 13.5rem);
   }
 
   .Header-Text p:last-child {
-    font-size: 25rem;
-    line-height: 1.5rem;
-    margin-top: -5rem;
+    font-size: clamp(4rem, 40vw + 0.5em, 22.5rem);
   }
 
-  header img {
-    width: 27.5rem;
+  .Header-Image img {
+    width: clamp(200px, 50vw, 500px);
   }
 }
 </style>
