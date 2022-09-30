@@ -16,7 +16,6 @@
       </div>
       <div class="Squad-Image">
         <div class="Squad-Bg"></div>
-        <!-- <img src="@/assets/images/squad.png" alt="Grupo Médico" /> -->
         <p>cuidado</p>
       </div>
     </div>
@@ -34,6 +33,8 @@ export default defineComponent({
 <style lang="scss" scoped>
 section {
   background-color: $light;
+  display: flex;
+  justify-content: center;
 }
 
 .Squad-Info {
