@@ -2,6 +2,7 @@
   <HomeSection />
   <SquadSection />
   <DoctorsSection />
+  <SpecialtiesSection />
 </template>
 
 <script lang="ts">
@@ -9,6 +10,7 @@ import { defineComponent } from "vue";
 import HomeSection from "./sections/Home.vue";
 import SquadSection from "./sections/Squad.vue";
 import DoctorsSection from "./sections/Doctors.vue";
+import SpecialtiesSection from "./sections/Specialties.vue";
 
 export default defineComponent({
   name: "App",
@@ -16,6 +18,7 @@ export default defineComponent({
     HomeSection,
     SquadSection,
     DoctorsSection,
+    SpecialtiesSection,
   },
 });
 </script>
@@ -42,9 +45,18 @@ export default defineComponent({
   display: none !important;
 }
 
+#doctors .carousel__next,
+#doctors .carousel__prev {
+  transform: translate(0, calc(-1 * clamp(150px, 25vh, 200px)));
+}
+
+#specialties .carousel__next,
+#specialties .carousel__prev {
+  transform: translate(0, calc(-1 * clamp(225px, 25vh, 250px)));
+}
+
 .carousel__next,
 .carousel__prev {
-  transform: translate(0, calc(-1 * clamp(150px, 25vh, 200px)));
   background-color: $alt;
   border-radius: 0;
   border-top-left-radius: 10px;
@@ -77,12 +89,38 @@ html {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background-color: $primary;
+  background: $primary;
+}
+
+@media only screen and (max-width: 280px) {
+  #specialties .carousel__next,
+  #specialties .carousel__prev {
+    transform: translate(0, calc(-1 * clamp(325px, 25vh, 375px)));
+  }
+
+  #doctors .carousel__next,
+  #doctors .carousel__prev {
+    transform: translate(0, calc(-1 * clamp(300px, 25vh, 350px)));
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #specialties .carousel__next,
+  #specialties .carousel__prev {
+    transform: translate(0, calc(-1 * clamp(75px, 25vh, 120px)));
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #specialties .carousel__next,
+  #specialties .carousel__prev {
+    transform: unset;
+  }
 }
 
 @media only screen and (min-width: 1360px) {
-  .carousel__next,
-  .carousel__prev {
+  #doctors .carousel__next,
+  #doctors .carousel__prev {
     transform: unset;
   }
 }
