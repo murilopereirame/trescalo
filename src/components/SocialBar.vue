@@ -11,23 +11,8 @@
   </div>
 </template>
 <script lang="ts">
-import { OhVueIcon, addIcons } from "oh-vue-icons";
-import {
-  LaFacebookSquare,
-  LaWhatsapp,
-  LaLinkedin,
-  LaInstagram,
-  MdEmailOutlined,
-} from "oh-vue-icons/icons";
+import { OhVueIcon } from "oh-vue-icons";
 import { defineComponent } from "vue";
-
-addIcons(
-  LaFacebookSquare,
-  LaWhatsapp,
-  LaLinkedin,
-  LaInstagram,
-  MdEmailOutlined
-);
 
 export default defineComponent({
   name: "SocialBar",
