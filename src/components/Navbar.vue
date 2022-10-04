@@ -31,20 +31,24 @@
         <div class="Navbar-Down">
           <div class="Sections-Icons">
             <SectionButton
+              action="#squad"
               content="O GRUPO"
-              :image="require('@/assets/images/squad_nav.png')"
+              :image="require('@/assets/images/squad_nav.jpg')"
             />
             <SectionButton
+              action="#doctors"
               content="CORPO MÉDICO"
-              :image="require('@/assets/images/doctors_nav.png')"
+              :image="require('@/assets/images/doctors_nav.jpg')"
             />
             <SectionButton
+              action="#specialties"
               content="ESPE CIALI DADES"
-              :image="require('@/assets/images/specialties_nav.png')"
+              :image="require('@/assets/images/specialties_nav.jpg')"
             />
             <SectionButton
+              action="#contact"
               content="CON TATO"
-              :image="require('@/assets/images/contact_nav.png')"
+              :image="require('@/assets/images/contact_nav.jpg')"
             />
           </div>
         </div>
@@ -56,23 +60,31 @@
           </div>
         </div>
         <SectionButton
+          action="#squad"
           content="O GRUPO"
-          :image="require('@/assets/images/squad_nav.png')"
+          :image="require('@/assets/images/squad_nav.jpg')"
         />
         <SectionButton
+          action="#doctors"
           content="CORPO MÉDICO"
-          :image="require('@/assets/images/doctors_nav.png')"
+          :image="require('@/assets/images/doctors_nav.jpg')"
         />
         <div class="Navbar-Logo">
-          <img src="@/assets/images/logo-min.svg" alt="Grupo Trescalo" />
+          <img
+            src="@/assets/images/logo-min.svg"
+            alt="Grupo
+          Trescalo"
+          />
         </div>
         <SectionButton
+          action="#specialties"
           content="ESPE CIALI DADES"
-          :image="require('@/assets/images/specialties_nav.png')"
+          :image="require('@/assets/images/specialties_nav.jpg')"
         />
         <SectionButton
+          action="#contact"
           content="CON TATO"
-          :image="require('@/assets/images/contact_nav.png')"
+          :image="require('@/assets/images/contact_nav.jpg')"
         />
         <div class="Social-Icons">
           <a href="">
@@ -93,13 +105,12 @@
   </div>
 </template>
 <script lang="ts">
-import { OhVueIcon } from "oh-vue-icons";
 import { defineComponent } from "vue";
 import SectionButton from "@/components/SectionButton.vue";
 
 export default defineComponent({
   name: "NavbarComponent",
-  components: { "v-icon": OhVueIcon, SectionButton },
+  components: { SectionButton },
 });
 </script>
 <style lang="scss" scoped>

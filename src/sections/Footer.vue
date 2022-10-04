@@ -50,7 +50,8 @@ footer {
   padding-top: 2.5rem;
   padding-bottom: 15rem;
   background-color: $light;
-
+  display: flex;
+  justify-content: center;
   .Wrapper {
     align-items: center;
   }

@@ -14,12 +14,10 @@
   </div>
 </template>
 <script lang="ts">
-import { OhVueIcon } from "oh-vue-icons";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "ContactForm",
-  components: { "v-icon": OhVueIcon },
 });
 </script>
 <style lang="scss" scoped>

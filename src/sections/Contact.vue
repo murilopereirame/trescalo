@@ -126,27 +126,12 @@ section {
 }
 </style>
 <script lang="ts">
-import { addIcons, CustomizeIconType } from "oh-vue-icons";
 import { defineComponent } from "vue";
 import ContactMethod from "../components/ContactMethod.vue";
 import ContactForm from "../components/ContactForm.vue";
-import { findIcons } from "@/util";
 
 export default defineComponent({
   name: "ContactSection",
-  setup() {
-    const icons: CustomizeIconType[] = findIcons([
-      "la-phone-volume-solid",
-      "la-whatsapp",
-      "co-facebook",
-      "la-instagram",
-      "md-email-outlined",
-      "oi-location",
-      "bi-chevron-right",
-    ]);
-
-    addIcons(...icons);
-  },
   components: { ContactMethod, ContactForm },
 });
 </script>

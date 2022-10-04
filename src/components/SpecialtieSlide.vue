@@ -1,18 +1,9 @@
 <template>
-  <div class="Specialtie-Slide">
+  <div :style="{ backgroundImage: 'url(' + bg + ')' }" class="Specialtie-Slide">
     <div class="Specialtie-Holder">
-      <h1>infectologia laringologia</h1>
+      <h1>{{ title }}</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-        laoreet tempor nisl, sed tincidunt ex interdum et. Curabitur mattis
-        elementum pulvinar. Aliquam mi erat, rutrum et fringilla eget, tincidunt
-        rhoncus est. Suspendisse et dui at nisl pellentesque cursus. Integer vel
-        turpis nunc. Praesent scelerisque ante et ipsum mattis fringilla vel sit
-        amet ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Aliquam ut felis vitae ante lobortis aliquam. Pellentesque volutpat urna
-        ac blandit fringilla. Quisque faucibus eget ex at ultricies. Suspendisse
-        et metus ac massa convallis volutpat. In augue augue, euismod in
-        dignissim a, condimentum consequat erat.
+        {{ content }}
       </p>
     </div>
   </div>
@@ -22,11 +13,24 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "SpecialtieSlide",
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    content: {
+      type: String,
+      required: true,
+    },
+    bg: {
+      type: String,
+      required: true,
+    },
+  },
 });
 </script>
 <style lang="scss" scoped>
 .Specialtie-Slide {
-  background: url(@/assets/images/bg_especialidades.png);
   background-size: cover;
   background-position: center;
   color: $light;

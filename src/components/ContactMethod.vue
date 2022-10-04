@@ -7,7 +7,6 @@
   </div>
 </template>
 <script lang="ts">
-import { OhVueIcon } from "oh-vue-icons";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -18,7 +17,6 @@ export default defineComponent({
     action: { type: String, required: true },
     biggerFont: { type: Boolean, required: false },
   },
-  components: { "v-icon": OhVueIcon },
 });
 </script>
 <style lang="scss" scoped>

@@ -6,8 +6,37 @@
         <h4>conheça um pouco mais sobre nossas especialidades</h4>
       </div>
       <Carousel :items-to-show="1">
-        <Slide v-for="slide in 10" :key="slide">
-          <SpecialtiesSlide />
+        <Slide key="1">
+          <SpecialtiesSlide
+            title="infectologia"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        laoreet tempor nisl, sed tincidunt ex interdum et. Curabitur mattis
+        elementum pulvinar. Aliquam mi erat, rutrum et fringilla eget, tincidunt
+        rhoncus est. Suspendisse et dui at nisl pellentesque cursus. Integer vel
+        turpis nunc. Praesent scelerisque ante et ipsum mattis fringilla vel sit
+        amet ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aliquam ut felis vitae ante lobortis aliquam. Pellentesque volutpat urna
+        ac blandit fringilla. Quisque faucibus eget ex at ultricies. Suspendisse
+        et metus ac massa convallis volutpat. In augue augue, euismod in
+        dignissim a, condimentum consequat erat."
+            :bg="require('@/assets/images/bg_especialidades.avif')"
+          />
+        </Slide>
+        <Slide key="2">
+          <SpecialtiesSlide
+            title="infectologia"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        laoreet tempor nisl, sed tincidunt ex interdum et. Curabitur mattis
+        elementum pulvinar. Aliquam mi erat, rutrum et fringilla eget, tincidunt
+        rhoncus est. Suspendisse et dui at nisl pellentesque cursus. Integer vel
+        turpis nunc. Praesent scelerisque ante et ipsum mattis fringilla vel sit
+        amet ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aliquam ut felis vitae ante lobortis aliquam. Pellentesque volutpat urna
+        ac blandit fringilla. Quisque faucibus eget ex at ultricies. Suspendisse
+        et metus ac massa convallis volutpat. In augue augue, euismod in
+        dignissim a, condimentum consequat erat."
+            :bg="require('@/assets/images/bg_especialidades.avif')"
+          />
         </Slide>
 
         <template #addons>

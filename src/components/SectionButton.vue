@@ -1,6 +1,6 @@
 <template>
   <div class="Section-Button">
-    <a href="">
+    <a :href="action">
       <div
         :style="{ backgroundImage: 'url(' + image + ')' }"
         class="SB-Container"
@@ -21,6 +21,10 @@ export default defineComponent({
       required: true,
     },
     content: {
+      type: String,
+      required: true,
+    },
+    action: {
       type: String,
       required: true,
     },
