@@ -29,7 +29,7 @@
             action="https://wa.me/551112345678"
           />
           <ContactMethod
-            icon="oi-mail"
+            icon="md-email-outlined"
             content="contato@grupotrescalo.com"
             action="https://wa.me/551112345678"
           />
@@ -140,7 +140,7 @@ export default defineComponent({
       "la-whatsapp",
       "co-facebook",
       "la-instagram",
-      "oi-mail",
+      "md-email-outlined",
       "oi-location",
       "bi-chevron-right",
     ]);

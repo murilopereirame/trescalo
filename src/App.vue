@@ -1,4 +1,5 @@
 <template>
+  <NavbarComponent />
   <HomeSection />
   <SquadSection />
   <DoctorsSection />
@@ -15,6 +16,7 @@ import DoctorsSection from "./sections/Doctors.vue";
 import SpecialtiesSection from "./sections/Specialties.vue";
 import ContactSection from "./sections/Contact.vue";
 import FooterSection from "./sections/Footer.vue";
+import NavbarComponent from "@/components/Navbar.vue";
 
 export default defineComponent({
   name: "App",
@@ -25,6 +27,7 @@ export default defineComponent({
     SpecialtiesSection,
     ContactSection,
     FooterSection,
+    NavbarComponent,
   },
 });
 </script>

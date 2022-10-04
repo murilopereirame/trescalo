@@ -48,7 +48,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 footer {
   padding-top: 2.5rem;
-  padding-bottom: 7.5rem;
+  padding-bottom: 15rem;
   background-color: $light;
 
   .Wrapper {
@@ -99,7 +99,7 @@ footer {
 @media only screen and (min-width: 768px) {
   footer {
     padding-top: 2.5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
   }
   .Footer-Logo {
     .Logo-Desk {
