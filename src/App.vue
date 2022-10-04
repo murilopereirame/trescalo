@@ -4,6 +4,7 @@
   <DoctorsSection />
   <SpecialtiesSection />
   <ContactSection />
+  <FooterSection />
 </template>
 
 <script lang="ts">
@@ -13,6 +14,7 @@ import SquadSection from "./sections/Squad.vue";
 import DoctorsSection from "./sections/Doctors.vue";
 import SpecialtiesSection from "./sections/Specialties.vue";
 import ContactSection from "./sections/Contact.vue";
+import FooterSection from "./sections/Footer.vue";
 
 export default defineComponent({
   name: "App",
@@ -22,6 +24,7 @@ export default defineComponent({
     DoctorsSection,
     SpecialtiesSection,
     ContactSection,
+    FooterSection,
   },
 });
 </script>

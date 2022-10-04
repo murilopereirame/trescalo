@@ -95,15 +95,13 @@ section {
   .Contact-Body {
     display: flex;
     align-items: flex-start;
-    max-width: calc(100% - 80px);
   }
   section {
     display: flex;
     align-items: center;
     justify-content: center;
-
     .Wrapper {
-      padding-left: 160px;
+      padding-left: 50px;
     }
     .mapouter {
       margin: 1.25rem 2rem;
@@ -118,6 +116,12 @@ section {
       height: 100%;
       box-sizing: border-box;
     }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .Wrapper {
+    padding-left: 160px;
   }
 }
 </style>
