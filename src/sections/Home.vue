@@ -24,7 +24,7 @@ header {
   background: url("@/assets/images/bg_home.jpg");
   background-position-x: 30%;
   background-size: cover;
-  height: 100vh;
+  height: 75vh;
   width: 100%;
   padding-bottom: 50px;
   display: flex;
@@ -78,21 +78,48 @@ header {
   width: clamp(200px, 50vw, 380px);
 }
 
-@media only screen and (min-width: 540px) {
-  header {
-    padding-top: 150px;
+@media only screen and (max-width: 375px) {
+  .Header-Image {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .Header-Image img {
+    width: 150px;
   }
   .Header-Text p:first-child {
-    font-size: clamp(7rem, 25vw + 0.5em, 7rem);
+    font-size: clamp(3rem, 25vw + 0.5em, 4rem);
+    line-height: 0.75em;
   }
 
   .Header-Text p:last-child {
-    font-size: clamp(4rem, 40vw + 0.5em, 25rem);
-    bottom: clamp(-1em, -1vh, -0.55em);
+    font-size: clamp(3rem, 40vw + 0.5em, 9rem);
+    bottom: -4.5rem;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  header {
+    padding-top: 125px;
+    height: 75vh;
+  }
+  .Header-Text {
+    justify-content: flex-start;
+  }
+  .Header-Text p:first-child {
+    font-size: clamp(4rem, 25vw + 0.5em, 5rem);
+  }
+
+  .Header-Text p:last-child {
+    font-size: clamp(4rem, 40vw + 0.5em, 12.5rem);
+    bottom: -1rem;
   }
 
   .Header-Image {
-    padding-top: 150px;
+    justify-content: flex-start;
+  }
+
+  .Header-Image {
+    padding-top: 75px;
   }
 
   .Header-Image img {
@@ -103,6 +130,7 @@ header {
 @media only screen and (min-width: 768px) {
   header {
     padding-top: 100px;
+    height: 90vh;
   }
 
   .Header-Text {
@@ -110,27 +138,27 @@ header {
   }
 
   .Header-Text p:first-child {
-    font-size: clamp(7rem, 25vw + 0.5em, 10rem);
+    font-size: clamp(7rem, 25vw + 0.5em, 8rem);
   }
 
   .Header-Text p:last-child {
-    font-size: clamp(4rem, 40vw + 0.5em, 25rem);
-    bottom: clamp(-1em, -1vh, -0.55em);
+    font-size: clamp(4rem, 40vw + 0.5em, 17.5rem);
+    bottom: -6rem;
   }
 
   .Header-Image {
-    padding-top: 100px;
+    padding-top: 200px;
   }
 
   .Header-Image img {
-    width: clamp(200px, 50vw, 350px);
+    width: clamp(200px, 50vw, 300px);
   }
 }
 
 @media only screen and (min-width: 1024px) {
   header {
-    padding-top: 100px;
-    padding-bottom: 170px;
+    padding-top: 200px;
+    padding-bottom: 0px;
   }
 
   .Header-Text {
@@ -138,20 +166,20 @@ header {
   }
 
   .Header-Text p:first-child {
-    font-size: clamp(7rem, 25vw + 0.5em, 10rem);
+    font-size: clamp(7rem, 25vw + 0.5em, 8.5rem);
   }
 
   .Header-Text p:last-child {
-    font-size: clamp(4rem, 40vw + 0.5em, 20rem);
+    font-size: clamp(4rem, 40vw + 0.5em, 18.5rem);
     bottom: clamp(-1em, -1vh, -0.5em);
   }
 
   .Header-Image {
-    padding-top: clamp(100px, 50vh, 300px);
+    padding-top: clamp(100px, 50vh, 250px);
   }
 
   .Header-Image img {
-    width: clamp(200px, 50vw, 350px);
+    width: clamp(200px, 50vw, 300px);
   }
 }
 

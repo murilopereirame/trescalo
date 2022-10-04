@@ -38,7 +38,7 @@ section {
 }
 
 .Squad-Info {
-  padding: clamp(100px, 25vh, 200px) 50px 25px 30px;
+  padding: clamp(75px, 25vh, 100px) 50px 25px 30px;
 }
 
 .Squad-Info p {
@@ -92,7 +92,7 @@ section {
 
 @media only screen and (min-width: 768px) {
   .Squad-Info {
-    padding: clamp(100px, 25vh, 200px) 100px 25px 60px;
+    padding: clamp(100px, 25vh, 150px) 100px 25px 60px;
   }
 
   .Squad-Info p:first-child {
@@ -122,7 +122,7 @@ section {
 
 @media only screen and (min-width: 1360px) {
   section {
-    padding-top: 200px;
+    padding-top: 100px;
     height: min-content;
   }
   .Wrapper {
