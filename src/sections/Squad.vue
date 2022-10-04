@@ -69,7 +69,7 @@ section {
   width: calc(100% - 60px);
   min-height: 500px;
   border-radius: clamp(20px, 1vw, 50px);
-  background: url(@/assets/images/squad.png);
+  background: url(@/assets/images/squad.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -197,7 +197,7 @@ section {
 
   .Squad-Image p {
     font-size: clamp(4rem, 37.5vw + 0.5em, 22.25rem);
-    bottom: -70px;
+    bottom: -185px;
   }
 }
 </style>

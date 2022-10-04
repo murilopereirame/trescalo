@@ -1,30 +1,32 @@
 <template>
   <div class="Doctor-Slide">
-    <img src="@/assets/images/placeholder_doctor.png" alt="Doutor João Silva" />
+    <img v-lazy="{ src: info.image }" :alt="info.name" />
     <div class="Doctor-Data">
       <div class="Doctor-Info">
-        <h1>Doutor João Silva</h1>
-        <h3>Infectologista</h3>
-        <h3>Unoeste</h3>
+        <h1>{{ info.name }}</h1>
+        <h3>{{ info.specialtie }}</h3>
+        <h3>{{ info.university }}</h3>
         <p>
-          Maecenas ac diam sit amet quam molestie sodales. Phasellus quis arcu
-          nec lorem accumsan consequat accumsan a sapien. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Cras aliquet convallis vestibulum.
-          Donec luctus urna quis metus luctus lobortis. Quisque egestas est sit
-          amet fermentum facilisis. Nunc aliquet tellus vel mi fringilla, et
-          auctor lorem gravida.
+          {{ info.description }}
         </p>
       </div>
-      <SocialBar />
+      <SocialBar :links="info.social" />
     </div>
   </div>
 </template>
 <script lang="ts">
 import SocialBar from "./SocialBar.vue";
 import { defineComponent } from "vue";
+import { IDoctorProps } from "@/interfaces";
 
 export default defineComponent({
   name: "DoctorSlide",
+  props: {
+    info: {
+      type: Object as () => IDoctorProps,
+      required: true,
+    },
+  },
   components: {
     SocialBar,
   },

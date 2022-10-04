@@ -2,24 +2,35 @@
   <div class="Social-Bar">
     <h5>Conheça mais sobre este profissional</h5>
     <div class="Social-Icons">
-      <a href=""><v-icon name="la-whatsapp" /></a>
-      <a href=""><v-icon name="la-linkedin" /></a>
-      <a href=""><v-icon name="la-instagram" /></a>
-      <a href=""><v-icon name="la-facebook-square" /></a>
-      <a href=""><v-icon name="md-email-outlined" /></a>
+      <a target="_blank" rel="external noopener" :href="links.whatsapp">
+        <v-icon name="la-whatsapp" />
+      </a>
+      <a target="_blank" rel="external noopener" :href="links.linkedin">
+        <v-icon name="la-linkedin" />
+      </a>
+      <a target="_blank" rel="external noopener" :href="links.instagram">
+        <v-icon name="la-instagram" />
+      </a>
+      <a target="_blank" rel="external noopener" :href="links.facebook">
+        <v-icon name="la-facebook-square" />
+      </a>
+      <a target="_blank" rel="external noopener" :href="links.email">
+        <v-icon name="md-email-outlined" />
+      </a>
     </div>
   </div>
 </template>
 <script lang="ts">
-import { OhVueIcon } from "oh-vue-icons";
 import { defineComponent } from "vue";
-
+import { ISocialBarProps } from "@/interfaces";
 export default defineComponent({
   name: "SocialBar",
-  data() {
-    return {};
+  props: {
+    links: {
+      type: Object as () => ISocialBarProps,
+      required: true,
+    },
   },
-  components: { "v-icon": OhVueIcon },
 });
 </script>
 <style lang="scss">

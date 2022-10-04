@@ -21,7 +21,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 header {
-  background: url("@/assets/images/bg_home.jpg");
+  background: url("@/assets/images/bg_home.avif");
   background-position-x: 30%;
   background-size: cover;
   height: 75vh;
@@ -227,6 +227,7 @@ header {
 
   .Header-Text p:last-child {
     font-size: clamp(4rem, 40vw + 0.5em, 22.5rem);
+    bottom: clamp(-1em, -1vh, -0.85em);
   }
 
   .Header-Image img {

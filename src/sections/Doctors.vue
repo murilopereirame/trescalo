@@ -9,8 +9,24 @@
         <p>experiencia</p>
       </div>
       <Carousel :items-to-show="1">
-        <Slide v-for="slide in 10" :key="slide">
-          <DoctorSlide />
+        <Slide key="1">
+          <DoctorSlide
+            :info="{
+              name: 'Doutor João Silva',
+              specialtie: 'Infectologista',
+              university: 'Unoeste',
+              description:
+                'Maecenas ac diam sit amet quam molestie sodales. Phasellus quis arcu nec lorem accumsan consequat accumsan a sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet convallis vestibulum. Donec luctus urna quis metus luctus lobortis. Quisque egestas est sit amet fermentum facilisis. Nunc aliquet tellus vel mi fringilla, et auctor lorem gravida.',
+              image: require('@/assets/images/placeholder_doctor.jpg'),
+              social: {
+                whatsapp: 'https://wa.me/',
+                linkedin: 'https://linkedin.com',
+                instagram: 'https://instagram.com',
+                facebook: 'https://facebook.com',
+                email: 'mailto:example@example.com',
+              },
+            }"
+          />
         </Slide>
 
         <template #addons>
