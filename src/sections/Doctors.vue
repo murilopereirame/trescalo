@@ -48,6 +48,7 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   min-height: 100%;
+  padding-bottom: 1.25rem;
 }
 .Doctors-Intro {
   padding: clamp(1rem, 10vh, 2rem) 50px 0 30px;
