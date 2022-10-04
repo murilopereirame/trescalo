@@ -24,7 +24,7 @@ header {
   background: url("@/assets/images/bg_home.jpg");
   background-position-x: 30%;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding-bottom: 50px;
   display: flex;

@@ -3,6 +3,7 @@
   <SquadSection />
   <DoctorsSection />
   <SpecialtiesSection />
+  <ContactSection />
 </template>
 
 <script lang="ts">
@@ -11,6 +12,7 @@ import HomeSection from "./sections/Home.vue";
 import SquadSection from "./sections/Squad.vue";
 import DoctorsSection from "./sections/Doctors.vue";
 import SpecialtiesSection from "./sections/Specialties.vue";
+import ContactSection from "./sections/Contact.vue";
 
 export default defineComponent({
   name: "App",
@@ -19,109 +21,7 @@ export default defineComponent({
     SquadSection,
     DoctorsSection,
     SpecialtiesSection,
+    ContactSection,
   },
 });
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-  height: 100%;
-}
-
-.Wrapper {
-  display: flex;
-  flex-direction: column;
-  max-width: 1920px;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel__prev--in-active,
-.carousel__next--in-active {
-  display: none !important;
-}
-
-#doctors .carousel__next,
-#doctors .carousel__prev {
-  transform: translate(0, calc(-1 * clamp(150px, 25vh, 200px)));
-}
-
-#specialties .carousel__next,
-#specialties .carousel__prev {
-  transform: translate(0, calc(-1 * clamp(225px, 25vh, 250px)));
-}
-
-.carousel__next,
-.carousel__prev {
-  background-color: $alt;
-  border-radius: 0;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  width: 64px;
-  height: 52px;
-  text-align: center;
-  font-size: 48px;
-  padding: 0;
-  color: $secondary;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: absolute;
-  border: 0;
-  cursor: pointer;
-}
-
-.carousel__prev {
-  width: 72px;
-  border-radius: 0;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  justify-content: flex-end;
-}
-
-body,
-html {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  background: $primary;
-}
-
-@media only screen and (max-width: 280px) {
-  #specialties .carousel__next,
-  #specialties .carousel__prev {
-    transform: translate(0, calc(-1 * clamp(325px, 25vh, 375px)));
-  }
-
-  #doctors .carousel__next,
-  #doctors .carousel__prev {
-    transform: translate(0, calc(-1 * clamp(300px, 25vh, 350px)));
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  #specialties .carousel__next,
-  #specialties .carousel__prev {
-    transform: translate(0, calc(-1 * clamp(75px, 25vh, 120px)));
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  #specialties .carousel__next,
-  #specialties .carousel__prev {
-    transform: unset;
-  }
-}
-
-@media only screen and (min-width: 1360px) {
-  #doctors .carousel__next,
-  #doctors .carousel__prev {
-    transform: unset;
-  }
-}
-</style>
